@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />     
+<meta name="apple-mobile-web-app-capable" content="yes" />    
+<meta name="format-detection" content="telephone=no" />  
+    <script type="text/javascript">
+        //显示时钟
+        function startTime() {
+            var today = new Date()
+            var h = today.getHours()
+            var m = today.getMinutes()
+            var s = today.getSeconds()
+            // add a zero in front of numbers<10
+            m = checkTime(m)
+            s = checkTime(s)
+            document.getElementById('txt').innerHTML = h + ":" + m + ":" + s
+            t = setTimeout('startTime()', 500)
+        }
+
+        function checkTime(i) {
+            if (i < 10)
+            { i = "0" + i }
+            return i
+        }
+		
+    </script>
+</head>
+
+<body onload="startTime()">
+    <div id="txt" style="font-size:500%"></div>   <!--显示时钟-->
+	<h1>   </h1>
+	<input type="button" value="2048游戏(电脑版)" onclick='window.location.href = "http://xnu132.xicp.io/HTML5_2048/index.html";' style="font-size:250%;color:#FF862C;font-family:微软雅黑"/>
+	<h2>   </h2>
+	<input type="button" value="2048游戏(手机版)" onclick='window.location.href = "http://xnu132.xicp.io/HTML5_2048/mindex.html";' style="font-size:250%;color:#460000;font-family:微软雅黑"/>
+	<h3>   </h3>
+	<input type="button" value="看图猜词(手机版)" onclick='window.location.href = "http://xnu132.xicp.io/HTML5_KTCC/index.html"' style="font-size:250%;color:#FF0058;font-family:微软雅黑"/>
+	<h4>   </h4>
+	<input type="button" value="双人五子棋(均可)" onclick='window.location.href = "http://xnu132.xicp.io/HTML5_WZQ/index.html";' style="font-size:250%;color:#008BA7;font-family:微软雅黑"/>
+	<h5>   </h5>
+	<input type="button" value="重力滚球(电脑版)" onclick='window.location.href = "http://xnu132.xicp.io/HTML5_ZLGQ/index.html";' style="font-size:250%;color:#2C8900;font-family:微软雅黑"/>
+</body>
+</html>
